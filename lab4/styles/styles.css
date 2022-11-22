@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+
+*{
+    margin:0px;
+
+}
+body{
+    background-color: #8ab5c5;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+#header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#main{
+    padding-top: 5%;
+    display: grid;
+    margin-right: 10%;
+    margin-left: 10%;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5%;
+}
+#leftside{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+}
+#rightside{
+    grid-column: 2;
+    position: relative;
+}
+#David{
+    position: absolute;
+    left:20px;
+    top:0px;
+}
+#Neptun{
+    position:absolute;
+    bottom:0px;
+    right: 20px;
+    z-index: 2;
+}
+button{
+    background-color: #8ab5c5;
+    border-style: none;
+    color:white;
+    text-align: left;
+    font-style: italic;
+}
+.boxBlue{
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    text-align: left;
+    padding-top: 30%;
+    padding-bottom: 20%;
+    font-style: italic;
+    color: white;
+    font-weight: 600;
+}
+.boxBlue h2{
+    color:white;
+    font-style: normal;
+    padding-bottom: 20px;
+
+}
+.boxWhite{
+    background-color: white;
+    padding-left: 20px ;
+    padding-right: 20px;
+    padding-top: 30%;
+    padding-bottom: 20%;
+    font-style: italic;
+    font-weight: 550;
+}
+.boxWhite h2{
+    color: #8ab5c5;
+
+    font-style: normal;
+    padding-bottom: 20px;
+}
+img{
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+
+}
+.boxBlue:hover{
+    opacity: 0.5;
+    transform:scale(1.1);
+}
+#Neptun:hover{
+    transform:scale(1.1);
+}
+#David:hover{
+    z-index: 3;
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 600px) {
+
+    #main{
+        padding-top: 5%;
+        display: grid;
+        margin-right: 10%;
+        margin-left: 10%;
+        grid-template-rows: 3fr 1fr;
+        grid-row-gap: 20px;
+        padding-bottom: 5%;
+    }
+    #leftside{
+        grid-row: 1;
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #rightside{
+        grid-column: 1/3;
+        grid-row: 2;
+        position: relative;
+    }
+    #David{
+        position: absolute;
+        left: 0px;
+        top:0px;
+    }
+    #Neptun{
+        position:absolute;
+        bottom:0px;
+        right: 0px;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "styles": {
+        "neutral": [
+            ".buttons {background-color: white;width: 100px;height: 40px;border: 2px solid #333;border-radius: 4px;font-size: large;text-align: center;font-weight: bold;text-decoration: none;}",
+            ".buttons:hover {background-color: #333;color: white;}",
+            "#playbutton {margin: 5% calc(43% - 1.9vw);}",
+            "#work {display: none;position: fixed;left: 50%;top: 50%;transform: translate(-50%, -50%);z-index: 999;width: 90%;height: 90%;background-color: #C4CBDB;border: 3px solid #000;}",
+            "#work #messagebox {position: absolute;top: 0;right: 0;margin: 1% 2%;overflow: hidden;}",
+            "#work .message {position: relative;top: 0;margin: 0;text-align: right;font-size: large;}",
+            "#anim {position: absolute;width: calc(100% - 10px);height: calc(100% - 50px);bottom: 0;left: 0;border: 5px solid firebrick;}",
+
+            ".showsq {animation: fadeIn .5s;}",
+            ".hidesq{animation: fadeOut 1s;}",
+            "@keyframes fadeIn {0% { opacity: 0; }100% { opacity: 1; }}",
+            "@keyframes fadeOut {0% { opacity: 1; }100% { opacity: 0; }}",
+            "@keyframes off {from {transform: scale(1,1) translateZ(1px);}to {transform: scale(0,0) translateZ(1px)}}",
+            "@keyframes on {from {transform: scale(0,0) translateZ(1px);}to {transform: scale(1,1) translateZ(1px)}}"
+        ],
+        "main": [
+            "#anim img{width: 100%;height: 100%;background-repeat: repeat;animation: animatedimage .5s ease;}",
+            "#squareBlue {position: absolute;background-color: blue;right: 0;width: 15px;height: 15px;z-index: 1000;}",
+            "#squareOrange {position: absolute;background-color: orange;bottom: 0;width: 15px;height: 15px;z-index: 1000;}",
+            "@keyframes animatedimage {from {transform: scale(0,0) translateZ(1px);}to {transform: scale(1,1) translateZ(1px)}}"
+        ],
+        "canvas": [
+            "#squareBlue {position: absolute;z-index: 1000;}",
+            "#squareOrange {position: absolute;z-index: 1000;}"
+        ]
+    },
+    "html": {
+        "central": "<input type=\"button\" class=\"buttons\" id=\"playbutton\"><div id=\"log\"></div>",
+        "main": "<div id=\"work\"><input type=\"button\" class=\"buttons\" id=\"closebutton\"><input type=\"button\" class=\"buttons\" id=\"squarebutton\"><div id=\"messagebox\"></div><div id=\"anim\"><img></div></div>",
+        "canvas": "<div id=\"work\"><input type=\"button\" class=\"buttons\" id=\"closebutton\"><input type=\"button\" class=\"buttons\" id=\"squarebutton\"><div id=\"messagebox\"></div><canvas id=\"anim\"></canvas></div></div>"
+    },
+    "buttons": {
+        "playbutton": "PLAY",
+        "closebutton": "close",
+        "squarebutton": "start"
+    }
+}
